@@ -2,8 +2,26 @@ public class StackExpTestDay1
 {
 	public static double evalAns(String exp)
 	{
-		return 0;
-	}
+		Stack<Integar> stack1 = new Stack<>();
+		    for(int i = 0; i<exp.length();i++){
+			    Char c = exp.charAt(i);
+			     if(c>=0){
+			     stack1.push(c);}
+			     if(c<0){
+			     int a = stack1.pop();
+			     int b = stack1.pop();
+			     if(c == "+"){
+			     stack1.push(a+b);}
+			     else if (c == "-"){
+			     stack1.push(a-b);}
+			     else if (c == "*"){
+			     stack1.push(a*b);}
+			     else if (c == "/"){
+			     stack1.push(a/b);}
+     }
+   }
+   return stack1.pop();
+ }
 	
   public static void main(String[] args)
   {
